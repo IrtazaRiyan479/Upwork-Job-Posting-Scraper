@@ -2,18 +2,15 @@ import requests
 
 class BrightData():
 
-
-    def __init__(self, link_to_scrape):
-        self.link = link_to_scrape
-
-    def get_data(self):
+    @staticmethod
+    def get_data(link):
         headers = {
             "Authorization": "Bearer d18282f4-80ee-4598-8448-5562130f4c50",
             "Content-Type": "application/json"
         }
         data = {
             "zone": "upwork_job",
-            "url": self.link,
+            "url": link,
             "format": "raw"
         }
 
@@ -22,4 +19,6 @@ class BrightData():
             json=data,
             headers=headers
         )
+        
         return response.text
+        
