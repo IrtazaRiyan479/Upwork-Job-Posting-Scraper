@@ -2,8 +2,7 @@ name: Run scraper every 15 minutes
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
-
+    - cron: "*/17 * * * *"
 permissions:
   contents: write
 
