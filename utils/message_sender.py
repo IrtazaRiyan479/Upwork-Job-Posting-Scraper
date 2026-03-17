@@ -52,7 +52,3 @@ class SendMessage:
             SendMessage.send_email(message_data, formatted_text)
         except Exception as e:
             SendMessage.send_email({'job_title': "error"}, e)
-
-
-
-SendMessage.send_email({'job_title': "test"}, "Hello")
