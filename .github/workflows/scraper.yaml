@@ -21,4 +21,4 @@ jobs:
         run: pip install requests beautifulsoup4 lxml
 
       - name: Run script
-        run: python scraper.py
+        run: python core/scraper.py
