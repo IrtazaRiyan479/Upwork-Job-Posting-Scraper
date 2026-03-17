@@ -3,7 +3,6 @@ name: Run scraper every 15 minutes
 on:
   schedule:
     - cron: "*/15 * * * *"
-  workflow_dispatch:
 
 permissions:
   contents: write
