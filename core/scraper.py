@@ -8,7 +8,8 @@ from utils.message_sender import SendMessage
 
 TARGET_URLS = [
     "https://www.upwork.com/freelance-jobs/apply/Operations-Assistant-Needed-for-Startups_~022033666226081862036/",
-    "https://www.upwork.com/freelance-jobs/apply/Basic-Amazon-PPC-Audit_~022033491565568189400/"
+    "https://www.upwork.com/freelance-jobs/apply/Basic-Amazon-PPC-Audit_~022033491565568189400/",
+    "https://www.upwork.com/freelance-jobs/apply/Graphic-Designer-Needed-for-Page-Event-Booklet_~022033141219545130896/"
 ]
 
 def main():
