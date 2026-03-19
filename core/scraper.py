@@ -7,8 +7,14 @@ from models.content_parser import ContentParser
 from utils.message_sender import SendMessage
 
 TARGET_URLS = [
-    "https://www.upwork.com/freelance-jobs/apply/Operations-Assistant-Needed-for-Startups_~022033666226081862036/",
     "https://www.upwork.com/freelance-jobs/apply/Basic-Amazon-PPC-Audit_~022033491565568189400/",
+    "https://www.upwork.com/jobs/Wix-Studio-Web-Designer-Needed-for-SEO-Mobile-Optimization-and-Site-Speed_~022033956900729326174/",
+    "https://www.upwork.com/jobs/PageSpeed-fix_~022034488374860388707",
+    "https://www.upwork.com/jobs/generated-Product-Listing-Pictures_~022034472035155621905/",
+    "https://www.upwork.com/jobs/Build-Simple-Chatbot-for-Website_~022034423696544337007/",
+    "https://www.upwork.com/freelance-jobs/apply/Amazon-New-launch-consultation_~022034320634119031919/",
+    "https://www.upwork.com/freelance-jobs/apply/Video-Editing-Specialist-Needed-for-Creative-Projects_~022033561004595415785/",
+    "https://www.upwork.com/jobs/WordPress-WooCommerce-Specialist-Immediate-Start_~022034377570745215979/",
 ]
 
 def main():
