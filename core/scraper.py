@@ -25,9 +25,9 @@ def main():
         if raw_data is not None:
             new_open_jobs_links = ContentParser.check_new_open_jobs(raw_data)
             if new_open_jobs_links:
-            for link in new_open_jobs_links:
-                new_open_job_data = ContentParser.read_job(BrightData.get_data(link))
-                SendMessage.send_notification(new_open_job_data, link)
+                for link in new_open_jobs_links:
+                    new_open_job_data = ContentParser.read_job(BrightData.get_data(link))
+                    SendMessage.send_notification(new_open_job_data, link)
 
 if __name__ == "__main__":
     main()
