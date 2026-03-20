@@ -21,6 +21,7 @@ TARGET_URLS = [
 def main():
     for url in TARGET_URLS:
         raw_data = BrightData.get_data(url)
+        print(url)
         if raw_data is not None:
             new_open_jobs_links = ContentParser.check_new_open_jobs(raw_data)
             if new_open_jobs_links:
