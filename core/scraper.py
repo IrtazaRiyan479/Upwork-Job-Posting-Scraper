@@ -14,7 +14,6 @@ TARGET_URLS = [
     "https://www.upwork.com/jobs/Build-Simple-Chatbot-for-Website_~022034423696544337007/",
     "https://www.upwork.com/freelance-jobs/apply/Amazon-New-launch-consultation_~022034320634119031919/",
     "https://www.upwork.com/freelance-jobs/apply/Video-Editing-Specialist-Needed-for-Creative-Projects_~022033561004595415785/",
-    "https://www.upwork.com/jobs/WordPress-WooCommerce-Specialist-Immediate-Start_~022034377570745215979/",
     "https://www.upwork.com/jobs/Wix-Website-Designer-and-Developer-for-Professional-Website-Redesign_~022034353069841338998/",
     "https://www.upwork.com/jobs/Data-Analysis-Specialist-for-Marketing-Insights_~022034314487697134198/"
 ]
