@@ -1,11 +1,12 @@
 import requests
 
+API_KEY = "d18282f4-80ee-4598-8448-5562130f4c50"
 class BrightData():
-
+    
     @staticmethod
     def get_data(link):
         headers = {
-            "Authorization": "Bearer d18282f4-80ee-4598-8448-5562130f4c50",
+            "Authorization": f"Bearer {API_KEY}",
             "Content-Type": "application/json"
         }
         data = {

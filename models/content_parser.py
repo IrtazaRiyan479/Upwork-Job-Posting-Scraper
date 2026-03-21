@@ -11,9 +11,17 @@ class ContentParser:
     def read_job(content):
         soup = BeautifulSoup(content, 'html.parser')
         new_job_data = {}
-        new_job_data["job_title"] = soup.title.get_text(strip=True)
-        new_job_data["description"] = soup.find('div', attrs={'data-test': "Description"}).text
-        new_job_data["no_of_proposals"] = soup.find('span', class_='title', string='Proposals:').find_parent('li').find('span', class_='value').text
+        new_job_data["job_title"] = soup.title.get_text(strip=True) if soup.title else ""
+        
+        desc_tag = soup.find('div', attrs={'data-test': "Description"})
+        new_job_data["description"] = desc_tag.get_text(strip=True) if desc_tag else ""
+        
+        prop_tag = soup.find('span', class_='title', string='Proposals:')
+        if prop_tag:
+            val_tag = prop_tag.find_parent('li').find('span', class_='value')
+            new_job_data["no_of_proposals"] = val_tag.get_text(strip=True) if val_tag else ""
+        else:
+            new_job_data["no_of_proposals"] = ""
         return new_job_data
 
     @staticmethod

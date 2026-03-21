@@ -18,9 +18,9 @@ class SendMessage:
 
         return (
             f"🚀 New Job Found!\n\n"
-            f"Title: {title}\n"
+            f"Title: {title}\n\n"
             f"Proposals: {proposals}\n\n"
-            f"Description:\n{desc}"
+            f"Description:\n{desc}\n\n"
             f"Link:{link}"
         )
 
