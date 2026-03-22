@@ -15,7 +15,7 @@ TARGET_URLS = [
     "https://www.upwork.com/freelance-jobs/apply/Amazon-New-launch-consultation_~022034320634119031919/",
     "https://www.upwork.com/freelance-jobs/apply/Video-Editing-Specialist-Needed-for-Creative-Projects_~022033561004595415785/",
     "https://www.upwork.com/freelance-jobs/apply/Wix-Website-Designer-and-Developer-for-Professional-Website-Redesign_~022034353069841338998",
-    "https://www.upwork.com/jobs/Data-Analysis-Specialist-for-Marketing-Insights_~022034314487697134198/"
+    "https://www.upwork.com/freelance-jobs/apply/Data-Analysis-Specialist-for-Marketing-Insights_~022034314487697134198"
 ]
 
 def main():
