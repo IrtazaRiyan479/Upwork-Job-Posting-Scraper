@@ -9,7 +9,9 @@ class ContentParser:
     
     @staticmethod
     def read_job(content):
-        soup = BeautifulSoup(content, 'html.parser')
+        soup = None
+        while soup == None:
+            soup = BeautifulSoup(content, 'html.parser')
         new_job_data = {}
         new_job_data["job_title"] = soup.title.get_text(strip=True) if soup.title else ""
         
@@ -26,7 +28,9 @@ class ContentParser:
 
     @staticmethod
     def check_new_open_jobs(raw_content):
-        soup = BeautifulSoup(raw_content, 'html.parser')
+        soup = None
+        while soup == None:
+            soup = BeautifulSoup(raw_content, 'html.parser')
         main_job_title = soup.title.get_text(strip=True)
         for char in ['|', '/', ':', '*', '?', '"', '<', '>', '\\']:
             main_job_title = main_job_title.replace(char, "-")
