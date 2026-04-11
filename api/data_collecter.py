@@ -1,6 +1,6 @@
 import requests
 
-API_KEY = "d18282f4-80ee-4598-8448-5562130f4c50"
+API_KEY = "75829c5f-25de-4b22-98a4-eefae9cfc120"
 class BrightData():
     
     @staticmethod
