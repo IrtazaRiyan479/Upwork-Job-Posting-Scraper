@@ -7,23 +7,29 @@ from models.content_parser import ContentParser
 from utils.message_sender import SendMessage
 
 TARGET_URLS = [
-    "https://www.upwork.com/freelance-jobs/apply/Basic-Amazon-PPC-Audit_~022033491565568189400/",
-    "https://www.upwork.com/freelance-jobs/apply/Wix-Studio-Web-Designer-Needed-for-SEO-Mobile-Optimization-and-Site-Speed_~022033956900729326174",
-    "https://www.upwork.com/freelance-jobs/apply/PageSpeed-fix_~022034488374860388707",
-    "https://www.upwork.com/freelance-jobs/apply/generated-Product-Listing-Pictures_~022034472035155621905",
-    "https://www.upwork.com/freelance-jobs/apply/Build-Simple-Chatbot-for-Website_~022034423696544337007",
-    "https://www.upwork.com/freelance-jobs/apply/Amazon-New-launch-consultation_~022034320634119031919/",
-    "https://www.upwork.com/freelance-jobs/apply/Video-Editing-Specialist-Needed-for-Creative-Projects_~022033561004595415785/",
-    "https://www.upwork.com/freelance-jobs/apply/Wix-Website-Designer-and-Developer-for-Professional-Website-Redesign_~022034353069841338998",
-    "https://www.upwork.com/freelance-jobs/apply/Data-Analysis-Specialist-for-Marketing-Insights_~022034314487697134198"
+    "https://www.upwork.com/freelance-jobs/apply/GoHighLevel-GHL-Specialist-Funnels-Automation-Email-Marketing_~022039045451332444059/",
+    "https://www.upwork.com/freelance-jobs/apply/Video-Editor-Short-Form-Content-Creator-Reels-TikTok-YouTube-Shorts_~022039108090355043475/",
+    "https://www.upwork.com/freelance-jobs/apply/Restaurant-Accounting-Specialist-Needed-for-QuickBooks-Cleanup-and-Reconciliation-Services_~022038918283703637922/",
+    "https://www.upwork.com/freelance-jobs/apply/Webflow-Website_~022039056969403495332/",
+    "https://www.upwork.com/freelance-jobs/apply/YouTube-Video-Editor-Needed-for-Engaging-Content_~022038632684250145342/",
+    "https://www.upwork.com/freelance-jobs/apply/Illustrator-Needed-for-Children-Board-Book-Illustration-Character-Design_~022039276234926509242/",
+    "https://www.upwork.com/freelance-jobs/apply/Marketing-Strategy-Consultant-CRM-Expert-for-Lead-Generation-Automation-Systems_~022038964057969254299/",
+    "https://www.upwork.com/freelance-jobs/apply/Virtual-Assistant-Needed-for-Ongoing-Project_~022039053705349423003/",
+    "https://www.upwork.com/freelance-jobs/apply/Shopify-Expert-Needed-for-Conversion-Focused-Store-Redesign_~022038943470851768786/",
+    "https://www.upwork.com/freelance-jobs/apply/Collection-Organization-for-our-Shopify-Store_~022039282197076052814/",
+    "https://www.upwork.com/freelance-jobs/apply/Flutter-Image-Generation-Performance-Expert-Needed-Reduce-Multi-Image-Response-Delay_~022039258829262491229/",
+    "https://www.upwork.com/freelance-jobs/apply/Klaviyo-Expert-Needed-Win-Back-Upsell-Flow-Setup_~022039256541658131566/",
+    "https://www.upwork.com/freelance-jobs/apply/Online-Course-Creation-Expert-Needed_~022039252441048092253/",
+    "https://www.upwork.com/freelance-jobs/apply/Senior-Full-Stack-DevOps-Architect-Needed_~022039196044540559826/",
 ]
 
 def main():
     for url in TARGET_URLS:
         print(f"MAIN URL ==== {url}")
-        raw_data = BrightData.get_data(url)
-        if raw_data is not None:
-            new_open_jobs_links = ContentParser.check_new_open_jobs(raw_data)
+        raw_data = None
+        while raw_data == None:
+            raw_data = BrightData.get_data(url)
+        new_open_jobs_links = ContentParser.check_new_open_jobs(raw_data, url)
 
         if new_open_jobs_links:
             for link in new_open_jobs_links:

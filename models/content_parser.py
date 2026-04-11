@@ -27,14 +27,21 @@ class ContentParser:
         return new_job_data
 
     @staticmethod
-    def check_new_open_jobs(raw_content):
+    def check_new_open_jobs(raw_content, url):
         soup = None
         while soup == None:
             soup = BeautifulSoup(raw_content, 'html.parser')
-        main_job_title = soup.title.get_text(strip=True)
+        
+        if soup.title:
+            main_job_title = soup.title.get_text(strip=True)
+        else:
+            main_job_title = url[:100] if url else "untitled_job"
+            
         for char in ['|', '/', ':', '*', '?', '"', '<', '>', '\\']:
             main_job_title = main_job_title.replace(char, "-")
-        open_jobs = soup.find('div', class_='other-jobs').select('section ul#otherOpenJobs li')
+
+        open__jobs = soup.find('div', class_='other-jobs')
+        open_jobs = open__jobs.select('section ul#otherOpenJobs li') if open__jobs else []
         total_open_jobs = []
         for job in open_jobs:
             anchor = job.find('strong').find('a')
