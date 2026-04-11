@@ -9,18 +9,13 @@ from utils.message_sender import SendMessage
 TARGET_URLS = [
     "https://www.upwork.com/freelance-jobs/apply/GoHighLevel-GHL-Specialist-Funnels-Automation-Email-Marketing_~022039045451332444059/",
     "https://www.upwork.com/freelance-jobs/apply/Video-Editor-Short-Form-Content-Creator-Reels-TikTok-YouTube-Shorts_~022039108090355043475/",
-    "https://www.upwork.com/freelance-jobs/apply/Restaurant-Accounting-Specialist-Needed-for-QuickBooks-Cleanup-and-Reconciliation-Services_~022038918283703637922/",
     "https://www.upwork.com/freelance-jobs/apply/Webflow-Website_~022039056969403495332/",
-    "https://www.upwork.com/freelance-jobs/apply/YouTube-Video-Editor-Needed-for-Engaging-Content_~022038632684250145342/",
-    "https://www.upwork.com/freelance-jobs/apply/Illustrator-Needed-for-Children-Board-Book-Illustration-Character-Design_~022039276234926509242/",
     "https://www.upwork.com/freelance-jobs/apply/Marketing-Strategy-Consultant-CRM-Expert-for-Lead-Generation-Automation-Systems_~022038964057969254299/",
     "https://www.upwork.com/freelance-jobs/apply/Virtual-Assistant-Needed-for-Ongoing-Project_~022039053705349423003/",
     "https://www.upwork.com/freelance-jobs/apply/Shopify-Expert-Needed-for-Conversion-Focused-Store-Redesign_~022038943470851768786/",
-    "https://www.upwork.com/freelance-jobs/apply/Collection-Organization-for-our-Shopify-Store_~022039282197076052814/",
     "https://www.upwork.com/freelance-jobs/apply/Flutter-Image-Generation-Performance-Expert-Needed-Reduce-Multi-Image-Response-Delay_~022039258829262491229/",
     "https://www.upwork.com/freelance-jobs/apply/Klaviyo-Expert-Needed-Win-Back-Upsell-Flow-Setup_~022039256541658131566/",
     "https://www.upwork.com/freelance-jobs/apply/Online-Course-Creation-Expert-Needed_~022039252441048092253/",
-    "https://www.upwork.com/freelance-jobs/apply/Senior-Full-Stack-DevOps-Architect-Needed_~022039196044540559826/",
 ]
 
 def main():
